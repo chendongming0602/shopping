@@ -1,7 +1,7 @@
 module.exports = {
 	// 请求域名 格式： https://您的域名
 	// #ifdef MP
-	HTTP_REQUEST_URL: '',
+	HTTP_REQUEST_URL: 'http://crmeb.t.tuixiu100.com',
 	// #endif
 
 	// #ifdef H5

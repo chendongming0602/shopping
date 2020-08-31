@@ -1,5 +1,5 @@
 {
-    "name" : "crmeb",
+    "name" : "老人商城1",
     "appid" : "__UNI__06E0263",
     "description" : "",
     "versionName" : "1.0.0",
@@ -56,10 +56,10 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx1a15fc0525cd4706",
+        "appid" : "wxa9a0016c797565f2",
         "setting" : {
             "urlCheck" : false,
-            "minified" : false,
+            "minified" : true,
             "postcss" : true,
             "es6" : true
         },

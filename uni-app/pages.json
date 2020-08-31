@@ -113,6 +113,7 @@
             "path" : "pages/play/play",
             "style" : {}
         }
+        
     ],
 	 "subPackages": [
 	    {
@@ -498,7 +499,7 @@
 	  ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "crmeb",
+		"navigationBarTitleText": "商城",
 		"navigationBarBackgroundColor": "#fff",
 		"backgroundColor": "#F8F8F8",
 		"titleNView": false
@@ -539,6 +540,11 @@
 		"current": 0, //当前激活的模式(list 的索引项)
 		"list": [
 			{
+				"name": "首頁", //模式名称
+				"path": "pages/index/index", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			},
+      {
 				"name": "播放", //模式名称
 				"path": "pages/play/play", //启动页面，必选
 				"query": "" //启动参数，在页面的onLoad函数里面得到

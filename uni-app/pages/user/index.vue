@@ -125,7 +125,7 @@
 			</button>
 			<!-- #endif -->
 		</view>
-		<img src="/static/images/support.png" alt="" class='support'>
+		<img src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/logo.png" alt="" class='support'>
 		<view style="height: 50rpx;"></view>
 		<!-- #ifdef MP -->
 		<authorize @onLoadFun="onLoadFun" :isAuto="isAuto" :isShowAuth="isShowAuth" @authColse="authColse"></authorize>

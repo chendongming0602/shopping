@@ -28,7 +28,8 @@
 			<headerSerch v-if="item.name == 'headerSerch'" :dataConfig="item"></headerSerch>
 			<liveBroadcast v-if="item.name == 'liveBroadcast'" :dataConfig="item"></liveBroadcast>
 			<menus v-if="item.name == 'menus'" :dataConfig="item"></menus>
-			<news v-if="item.name == 'news'" :dataConfig="item"></news>
+      <!-- 精選標題 -->
+			<!-- <news v-if="item.name == 'news'" :dataConfig="item"></news> -->
 			<promotionList v-if="item.name == 'promotionList'" :dataConfig="item" @changeTab="changeTab" :tempArr="tempArr" :iSshowH="iSshowH" @detail="goDetail"></promotionList>
 			<richText v-if="item.name == 'richText'" :dataConfig="item"></richText>
 			<seckill v-if="item.name == 'seckill'" :dataConfig="item"></seckill>

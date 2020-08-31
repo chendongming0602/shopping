@@ -38,7 +38,7 @@ function baseRequest(url, method, data, {noAuth = false, noVerify = false})
           reject(res.data.msg || '系统错误');
       },
       fail: (msg) => {
-        reject('请求失败');
+        reject('请求失败！');
       }
     })
   });
