@@ -37,10 +37,10 @@
                       class="album-item" 
                       v-for="(itemA,indexA) in item.source.images"
                       :key="indexA"
-                      style="opacity:1"
-                      :animation="item.animationData"
+                      :style="{zIndex:itemA.in}"
+                      
                     >
-                      <image mode="aspectFit" :src="itemA"></image>
+                      <image mode="aspectFit" :class="album_index==indexA?item.album_class:''" :style="{opacity:album_index==indexA?1:0}" :src="itemA.img"></image>
                     </view>
                   </view>
                 </view>
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+  let time1=null;
   export default {
     props: {
       titles: {
@@ -87,9 +88,15 @@
             source: {
               music: "https://album-1254468731.cos.ap-guangzhou.myqcloud…/35/20200630/08d3b5775e8bf3a2b719a52370eb891b.mp3",
               images: [
-                "https://oldman.tuixiu100.com/upload/20200810/183973fa6820bec965fedba260fb01f5.jpg",
-                "https://oldman.tuixiu100.com/upload/20200810/de34bd9b004325937501584dd930dd90.jpg",
-                "https://oldman.tuixiu100.com/upload/20200810/f0d7fd2d02e3eaed2163271c83d3ad8b.jpg"
+                {
+                  img:"https://oldman.tuixiu100.com/upload/20200810/183973fa6820bec965fedba260fb01f5.jpg",
+                },{
+                  img:"https://oldman.tuixiu100.com/upload/20200810/de34bd9b004325937501584dd930dd90.jpg",
+                },{
+                  img:"https://oldman.tuixiu100.com/upload/20200810/f0d7fd2d02e3eaed2163271c83d3ad8b.jpg",
+                }
+                
+                
               ]
             }
           },
@@ -130,9 +137,15 @@
             source: {
               music: "https://album-1254468731.cos.ap-guangzhou.myqcloud…/35/20200630/08d3b5775e8bf3a2b719a52370eb891b.mp3",
               images: [
-                "https://oldman.tuixiu100.com/upload/20200810/183973fa6820bec965fedba260fb01f5.jpg",
-                "https://oldman.tuixiu100.com/upload/20200810/de34bd9b004325937501584dd930dd90.jpg",
-                "https://oldman.tuixiu100.com/upload/20200810/f0d7fd2d02e3eaed2163271c83d3ad8b.jpg"
+                {
+                  img:"https://oldman.tuixiu100.com/upload/20200810/183973fa6820bec965fedba260fb01f5.jpg",
+                },{
+                  img:"https://oldman.tuixiu100.com/upload/20200810/de34bd9b004325937501584dd930dd90.jpg",
+                },{
+                  img:"https://oldman.tuixiu100.com/upload/20200810/f0d7fd2d02e3eaed2163271c83d3ad8b.jpg",
+                }
+                
+                
               ]
             }
           },
@@ -185,7 +198,8 @@
           LIVE: "live"
         },
         //播放狀態
-        videoStatus:true
+        videoStatus:true,
+        album_index:-1,
       }
     },
     created() {
@@ -202,7 +216,7 @@
         let {list,isClass}=this;
         try{
           list[current].mediaType===isClass.VIDEO&&this.videoStart(current);
-          list[current].mediaType===isClass.IMG&&this.albumStart(current);
+          list[current].mediaType===isClass.IMG&&this.albumStart(current,this.album_index);
         }catch(err){
           // APP.toastShow("此条作品可能被删除了！",true);
           // setTimeout(()=>{wx.navigateBack()},1300);
@@ -214,37 +228,37 @@
         setTimeout(()=>{this._videos.play();},200);
       },
       //相册初始开始
-      albumStart(current){
-        //重置
+      albumStart(current,album_index){
         let {list}=this;
-        this.list[current].al=false
-        // this.setData({
-        //   [`list[${current}].al`]:false
-        // });
         this._audios=uni.createInnerAudioContext();
         this._audios.src="https://img-cdn-qiniu.dcloud.net.cn/uniapp/audio/music.mp3";
         this._audios.loop=true;
         this._audios.play();
-        console.log("音樂",this._audios,list[current].source.music)
-        this.albumChange(current,0);
+        // console.log("音樂",this._audios,li st[current].source.music)
+        //初始动画
+        clearTimeout(time1);
+        //从第几个开始
+        this.album_index=album_index;
+        this.albumChange(current);
       },
       //相冊動畫
-      albumChange(current,index){
-        console.log(this.list)
-        this.album_ani = uni.createAnimation({
-          transformOrigin: "50% 50%",
-          duration: 1000,
-          timingFunction: "ease",
-          delay: 1000
-        });
-        this.album_ani.opacity(0).translateX(370).step();
-        this.album_ani.opacity(1).translateX(0).step();
-        this.album_ani.opacity(1).translateX(0).step();
-        this.album_ani.opacity(1).translateX(0).step();
-        this.album_ani.opacity(0).translateX(-370).step();
-        
-        this.list[current].animationData=this.album_ani.export();
-        console.log(this.list)
+      albumChange(current){
+        let ran=this.randomEvent();
+        if(ran==this.ran_count) return this.albumChange(current);
+        clearTimeout(time1)
+        if(this.album_index>=this.list[current].source.images.length-1) this.album_index=-1
+        this.album_index++;
+        this.ran_count=ran;    
+        this.list[current].album_class=`album${ran}`;
+        //控制z-index;
+        this.list[current].source.images.forEach(t=>{t.in=0});
+        this.list[current].source.images[this.album_index].in=1
+        this.list=JSON.parse(JSON.stringify(this.list));
+        time1=setTimeout(()=>{this.albumChange(current);},3000);
+      },
+      randomEvent(){
+        let ran=Math.floor(Math.random()*4);
+        return ran
       },
       //上下滑動觸發
       videoChange(e){
@@ -289,7 +303,7 @@
           //隐藏上面的
           if(current<list.length-2) this.list[current+2].is=false;
         }
-        console.log(this.list)
+        // console.log(this.list)
       },
       //列表加载更多
       async moreEvent(){
@@ -321,7 +335,7 @@
         //是视频
         list[current].mediaType===isClass.VIDEO&&this.videoStart(current);
         //是相册
-        list[current].mediaType===isClass.IMG&&this.albumStart(current);
+        list[current].mediaType===isClass.IMG&&this.albumStart(current,-1);
       },
       //上下改變時觸發
       upEvent(){},
@@ -350,6 +364,93 @@
     .album-item image{
       width: 100%;
       height: 100%;
+      transform: translate(100vw,100vh);
     }
+  }
+  @keyframes album0{
+    0%{
+      transform: translateX(100vw);
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+    40%,70%{
+      transform: translateX(0px);
+      opacity: 1;
+      width: 100%;
+      height: 100%;
+    }
+    100%{
+      transform: translateX(-100vw);
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .album0{
+    animation: album0 3s;
+animation-fill-mode: forwards;
+  }
+  @keyframes album1{
+    0%{
+      transform: translateY(100vh);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+    40%,70%{
+      transform: translateY(0px);
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(-100vh);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  .album1{
+    animation: album1 3s;
+  animation-fill-mode: forwards;
+  }
+  
+  @keyframes album2{
+    0%{
+      transform: scale(0);
+      opacity: 0;
+    }
+    40%,70%{
+      transform: scale(1);
+      opacity: 1;
+    }
+    100%{
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  .album2{
+    animation: album2 3s;
+   animation-fill-mode: forwards;
+  }
+  
+  @keyframes album3{
+    0%{
+      transform: scale(1.5);
+      opacity: 0;
+    }
+    40%,70%{
+      transform: scale(1);
+      opacity: 1;
+    }
+    100%{
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+  .album3{
+    animation: album3 3s;
+    animation-fill-mode: forwards;
   }
 </style>
