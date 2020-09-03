@@ -21,6 +21,7 @@
 			<bargain v-if="item.name == 'bargain'" :dataConfig="item" @changeBarg="changeBarg"></bargain>
 			<blankPage v-if="item.name == 'blankPage'" :dataConfig="item"></blankPage>
 			<combination v-if="item.name == 'combination'" :dataConfig="item"></combination>
+      <!-- 优惠卷 -->
 			<coupon v-if="item.name == 'coupon'" :dataConfig="item"></coupon>
 			<customerService v-if="item.name == 'customerService'" :dataConfig="item"></customerService>
 			<goodList v-if="item.name == 'goodList'" :dataConfig="item" @detail="goDetail"></goodList>

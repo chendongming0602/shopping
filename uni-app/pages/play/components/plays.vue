@@ -1,6 +1,12 @@
 <template>
-  <view>
-    <swiper class="ps-box" :indicator-dots="true" :interval="3000" :duration="1000">
+  <view @touchend="touchEndBox" @touchstart="touchStart" >
+    <swiper 
+    :current="lr_current" 
+    class="ps-box" 
+    :indicator-dots="true" 
+    :interval="3000"
+     @change="titlesEvent"
+    :duration="1000">
       <swiper-item class="ps-box-item" v-for="(itemBox,indexBox) in titles" :key="indexBox">
         <view class="ps-l" v-if="indexBox===0" style="height: 100%;">
           <swiper style="height: 100%;" 
@@ -50,16 +56,31 @@
           </swiper>
         </view>
 
-        <view class="ps-r" v-if="ts_index===1">
+        <view class="ps-r" v-if="indexBox===1">
           <slot name="ps_r"></slot>
         </view>
       </swiper-item>
     </swiper>
+    <Nav>
+      <view class="v-title">
+        <view 
+          v-for="(item,index) in titles" 
+          :key="index" 
+          :class="titleActive===index?'v-t-active':''"
+          @click="titlesEvent({detail:{current:index}})"
+          
+        >{{item}}
+         
+          <text v-if="titleActive===index"></text>
+        </view>
+      </view>
+    </Nav>
   </view>
 </template>
 
 <script>
   let time1=null;
+  import Nav from "@/components/nav/nav.vue";
   export default {
     props: {
       titles: {
@@ -200,6 +221,8 @@
         //播放狀態
         videoStatus:true,
         album_index:-1,
+        titleActive:0,
+        lr_current:0
       }
     },
     created() {
@@ -221,6 +244,32 @@
           // APP.toastShow("此条作品可能被删除了！",true);
           // setTimeout(()=>{wx.navigateBack()},1300);
         }
+      },
+      //列表加载更多（倒数第二个时就触发了）
+      async moreEvent(){
+        console.log("加載更多")
+      },
+      //console.log("下拉刷新")
+      bottomEvent(){
+        
+      },
+      //左右滚动触发
+      titlesEvent(e){
+        let {current} =e.detail
+        if(this.titleActive==current) return;
+        this.titleActive=this.lr_current=current;
+        current&&this.pauseEvent();
+        !current&&this.playEvent();
+      },
+      //暂停
+      pauseEvent(){
+        this._videos&&this._videos.pause();
+        this._audios&&this._audios.pause();
+      },
+      //播放
+      playEvent(){
+        this._videos&&this._videos.play();
+        this._audios&&this._audios.play();
       },
       //视频开始
       videoStart(current){
@@ -305,22 +354,6 @@
         }
         // console.log(this.list)
       },
-      //列表加载更多
-      async moreEvent(){
-        console.log("加載更多")
-        // //没数据
-        // if(this._more) return;
-        // //节流
-        // if(this._mores) return;
-        // this.setData({
-        //   "objs.id":this.data.list[this.data.list.length-1].id
-        // });
-        // this._mores=true;
-        // //在执行加载
-        // this._action="up";
-        // await this.getList();
-        // this._mores=false;
-      },
       //滑动控制器
       videoPlay(current){
         // let lr=current>this._current;
@@ -337,11 +370,28 @@
         //是相册
         list[current].mediaType===isClass.IMG&&this.albumStart(current,-1);
       },
+
       //上下改變時觸發
-      upEvent(){},
+      upEvent(e){
+        this._y=e.detail.dy;
+      },
       //上下改變動畫結束觸發
-      bindanimationfinish(){},
-     }
+      bindanimationfinish(){
+        (this._yy<-130&&this._ys==0) &&this.bottomEvent();
+        (this._yy>130&&this._ys==this.list.length-1) &&console.log("别拉了，没有数据了")
+      },
+      //手指开始点击位置
+      touchStart(e){
+        this._ys=this._current;
+      },
+      //滚动结束
+      touchEndBox(e){
+        //下拉刷新的距离
+         this._yy=this._y;
+      },
+     
+    },
+    components:{Nav}
   }
 </script>
 
@@ -452,5 +502,30 @@ animation-fill-mode: forwards;
   .album3{
     animation: album3 3s;
     animation-fill-mode: forwards;
+  }
+  .v-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 220rpx;
+  }
+  .v-title view{
+    color: #fff;
+    margin: 0 20rpx;
+    position: relative;
+  }
+  .v-t-active{
+    font-size: 34rpx;
+    font-weight: bold;
+  }
+  .v-title text{
+    position: absolute;
+    height: 6rpx;
+    background: #fff;
+    width: 56rpx;
+    bottom: -18rpx;
+    left: 50%;
+    margin-left: -29rpx;
   }
 </style>

@@ -20,7 +20,7 @@
 		</view>
 		<view class='noCommodity' v-else-if="!collectProductList.length && page > 1">
 			<view class='pictrue'>
-				<image src='../../../static/images/noCollection.png'></image>
+				<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noCollection.png'></image>
 			</view>
 			<recommend :hostProduct="hostProduct"></recommend>
 		</view>

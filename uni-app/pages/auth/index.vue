@@ -20,7 +20,7 @@
 	</view>
 	<view class="lottie-bg" v-else>
 		<view id="lottie">
-			<image src="/static/img/live-logo.gif" rel="preload" />
+			<image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/logo.png" rel="preload" />
 		</view>
 	</view>
 </template>

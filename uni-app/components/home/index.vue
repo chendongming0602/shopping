@@ -10,8 +10,8 @@
 				<view class="pictrue">
 					<image :src="
               homeActive === true
-                ? '/static/images/close.gif'
-                : '/static/images/open.gif'
+                ? 'https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/close.gif'
+                : 'https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/open.gif'
             "
 					 class="image" />
 				</view>

@@ -1,6 +1,6 @@
 <template name='even'>
 	<view class="advert">
-		<image src="../../../static/images/barg002.png"></image>
+		<image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/barg002.png"></image>
 	</view>
 </template>
 

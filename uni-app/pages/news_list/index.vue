@@ -62,7 +62,7 @@
 		</view>
 		<view class='noCommodity' v-if="articleList.length == 0 && (page != 1 || active== 0)">
 			<view class='pictrue'>
-				<image src='../../static/images/noNews.png'></image>
+				<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noNews.png'></image>
 			</view>
 		</view>
 		<home></home>

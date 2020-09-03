@@ -3,7 +3,7 @@
 		<block v-for="(item,index) in menus" :key="index">
 			<!-- <navigator class='item' v-if="item.show == '1'" :url='item.url' open-type='switchTab' hover-class='none'>
 				<view class='pictrue'>
-					<image src='../../../static/images/barg002.png'></image>
+					<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/barg002.png'></image>
 				</view>
 				<view class="menu-txt">{{item.name}}</view>
 			</navigator> -->

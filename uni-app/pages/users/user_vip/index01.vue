@@ -50,7 +50,7 @@
 			<recommend :hostProduct="hostProduct"></recommend>
 			<view class='growthValue' :class='growthValue==false?"on":""'>
 				<view class='pictrue'>
-					<image src='../../../static/images/value.jpg'></image><text class='iconfont icon-guanbi3' @click='growthValue'></text>
+					<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/value.jpg'></image><text class='iconfont icon-guanbi3' @click='growthValue'></text>
 				</view>
 				<view class='conter'>{{illustrate}}</view>
 			</view>

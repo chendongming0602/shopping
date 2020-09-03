@@ -21,7 +21,7 @@
 		</view>
 		<view class='noCommodity' v-if="!replyData.sum_count && page > 1">
 			<view class='pictrue'>
-				<image src='/images/noEvaluate.png'></image>
+				<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noEvaluate.png'></image>
 			</view>
 		</view>
 	</view>

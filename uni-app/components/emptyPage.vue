@@ -1,6 +1,6 @@
 <template>
 	<view class="empty-box">
-		<image src="/static/images/empty-box.png"></image>
+		<image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/empty-box.png"></image>
 		<view class="txt">{{title}}</view>
 	</view>
 </template>

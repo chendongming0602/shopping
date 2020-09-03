@@ -89,9 +89,9 @@
 			</view>
 			<view v-if="orderList.length == 0"><emptyPage title="暂无订单~"></emptyPage></view>
 		</view>
-		<view class="noCart" v-if="orderList.length == 0 && page > 1">
-			<view class="pictrue"><image src="/images/noOrder.png"></image></view>
-		</view>
+	<!-- 	<view class="noCart" v-if="orderList.length == 0 && page > 1">
+			<view class="pictrue"><image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noOrder.png"></image></view>
+		</view> -->
 		<!-- #ifdef MP -->
 		<authorize @onLoadFun="onLoadFun" :isAuto="isAuto" :isShowAuth="isShowAuth" @authColse="authColse"></authorize>
 		<!-- #endif -->

@@ -20,7 +20,7 @@
 								<checkbox :value="(item.id).toString()" :checked="item.checked" :disabled="item.attrStatus?false:true" />
 								<!-- #endif -->
 								<!-- #ifdef MP -->
-								<checkbox :value="item.id" :checked="item.checked" :disabled="item.attrStatus?false:true" />
+								<checkbox :value="item.id" :checked="item.checked"  />
 								<!-- #endif -->
 								<navigator :url='"/pages/goods_details/index?id="+item.product_id' hover-class='none' class='picTxt acea-row row-between-wrapper'>
 									<view class='pictrue'>
@@ -492,21 +492,30 @@
 				}
 			},
 			subOrder: function(event) {
-				let that = this,
-					selectValue = that.selectValue;
-				if (selectValue.length > 0) {
-					uni.navigateTo({
-						url: '/pages/users/order_confirm/index?cartId=' + selectValue.join(',')
+				let that = this,maps=new Map(),
+					selectValue = that.selectValue,newArr = that.cartList.valid,is=false;
+          selectValue.map(tt=>{
+            newArr.map(t=>{
+              if(tt==t.id) !t.attrStatus&&(is=true)
+            })
+          });
+          if(is) return that.$util.Tips({
+						title: '勿选择已失效商品！'
 					});
-				} else {
-					return that.$util.Tips({
-						title: '请选择产品'
-					});
-				}
+          if (selectValue.length > 0) {
+            uni.navigateTo({
+              url: '/pages/users/order_confirm/index?cartId=' + selectValue.join(',')
+            });
+          } else {
+            return that.$util.Tips({
+              title: '请选择产品'
+            });
+          }
 			},
+      //全部选择
 			checkboxAllChange: function(event) {
-				console.log('8989898989898989');
-				console.log(event.detail.value);
+				// console.log('8989898989898989');
+				// console.log(event.detail.value);
 				let value = event.detail.value;
 				if (value.length > 0) {
 					console.log(1)
@@ -524,40 +533,41 @@
 					console.log(valid);
 					for (let index in valid) {
 						if (status == 1) {
-							if(valid[index].attrStatus){
+							// if(valid[index].attrStatus){
 								valid[index].checked = true;
 								selectValue.push(valid[index].id);
-							}else{
-								valid[index].checked = false;
-							}
+							// }else{
+							// 	valid[index].checked = false;
+							// }
 						} else valid[index].checked = false;
 					}
-					console.log('88888888888888');
-					console.log(valid);
+					// console.log('88888888888888');
+					// console.log(valid);
 					that.$set(that.cartList, 'valid', valid);
 					console.log(that.cartList.valid);
 					that.selectValue = selectValue;
 					that.switchSelect();
 				}
 			},
+      //单个选择
 			checkboxChange: function(event) {
 				let that = this;
 				let value = event.detail.value;
 				let valid = that.cartList.valid;
 				for (let index in valid) {
 					if (that.inArray(valid[index].id, value)){
-						if(valid[index].attrStatus){
+						// if(valid[index].attrStatus){
 							valid[index].checked = true;
-						}else{
-							valid[index].checked = false;
-						}
+						// }else{
+						// 	valid[index].checked = false;
+						// }
 					} else {
 						valid[index].checked = false;
 					} 
 				}
 				that.$set(that.cartList, 'valid', valid);
 				let newArr = that.cartList.valid.filter(item => item.attrStatus);
-				that.isAllSelect = value.length == newArr.length;
+				that.isAllSelect = value.length == valid.length;
 				that.selectValue = value;
 				that.switchSelect();
 			},
@@ -712,7 +722,7 @@
 					// that.goodsHidden = cartList.valid.length <= 0 ? false : true;
 					that.selectValue = selectValue;
 					let newArr = validList.filter(item => item.attrStatus);
-					that.isAllSelect = newArr.length == selectValue.length && newArr.length;
+					that.isAllSelect = validList.length == selectValue.length && validList.length;
 					that.switchSelect();
 				}).catch(function() {
 					that.loading = false;

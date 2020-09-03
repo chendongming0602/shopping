@@ -33,7 +33,7 @@
 			</view>
 			<view class='noCommodity' v-if="addressList.length < 1 && page > 1">
 				<view class='pictrue'>
-					<image src='../../../static/images/noAddress.png'></image>
+					<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noAddress.png'></image>
 				</view>
 			</view>
 			<view style='height:120rpx;'></view>

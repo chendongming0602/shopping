@@ -3,7 +3,7 @@
 		<div class="shading">
 			<div class="pictrue acea-row row-center-wrapper">
 				<image :src="logoUrl" v-if="logoUrl" />
-				<image src="/static/images/logo2.png" v-else />
+				<image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/logo_r.png" v-else />
 			</div>
 		</div>
 		<div class="whiteBg" v-if="formItem === 1">

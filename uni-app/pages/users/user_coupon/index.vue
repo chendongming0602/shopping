@@ -23,7 +23,7 @@
 		</view>
 		<view class='noCommodity' v-if="!couponsList.length && loading==true">
 			<view class='pictrue'>
-				<image src='../../../static/images/noCoupon.png'></image>
+				<image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noCoupon.png'></image>
 			</view>
 		</view>
 		<!-- #ifdef MP -->

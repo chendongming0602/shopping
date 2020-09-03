@@ -2,7 +2,7 @@
 	<view class="register absolute">
 	    <view class="shading">
 	      <view class="pictrue acea-row row-center-wrapper">
-			 <image src="/static/images/logo2.png"></image>
+			 <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/logo_r.png"></image>
 	      </view>
 	    </view>
 	    <view class="whiteBg">

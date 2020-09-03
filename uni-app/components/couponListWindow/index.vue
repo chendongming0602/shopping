@@ -24,7 +24,7 @@
 		      </view>
 		   </view>
 		   <!-- 无优惠券 -->
-		   <view class='pictrue' v-else><image src='../../static/images/noCoupon.png'></image></view>
+		   <view class='pictrue' v-else><image src='https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/noCoupon.png'></image></view>
 		</view>
 		<view class='mask' catchtouchmove="true" :hidden='coupon.coupon==false' @click='close'></view>
 	</view>
