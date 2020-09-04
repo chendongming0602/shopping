@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="navBg" :style="{height:nav.CustomBar+'px'}">
+		<view class="navBg">
 		  <view :style="{height:nav.CustomBar+'px',paddingTop:nav.StatusBar+'px'}" class="contentFixed" >
         <slot></slot>
 		  </view>

@@ -75,12 +75,14 @@
         </view>
       </view>
     </Nav>
+    <Pop ref="pop">我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;我叫：前男友;</Pop>
   </view>
 </template>
 
 <script>
   let time1=null;
   import Nav from "@/components/nav/nav.vue";
+  import Pop from "@/components/pop/pop.vue";
   export default {
     props: {
       titles: {
@@ -251,7 +253,7 @@
       },
       //console.log("下拉刷新")
       bottomEvent(){
-        
+        this.$refs.pop.show();
       },
       //左右滚动触发
       titlesEvent(e){
@@ -391,7 +393,7 @@
       },
      
     },
-    components:{Nav}
+    components:{Nav,Pop}
   }
 </script>
 
