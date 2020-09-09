@@ -1,0 +1,11 @@
+<navbar parameter='{{parameter}}'></navbar>
+<view class="OrderCancellation">
+    <view class="header"></view>
+    <view class="whiteBg">
+      <view class="input"><input type="text" placeholder="0"></input></view>
+      <view class="bnt" bindtap="audit">立即核销</view>
+    </view>
+    <view class="scan"><image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/scan.gif"></image></view>
+    <!-- <WriteOff :iShidden="iShidden" @cancel="cancel"></WriteOff> -->
+    <write-off iShidden="{{iShidden}}" bind:cancel="cancel"></write-off>
+</view>
