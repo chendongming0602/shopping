@@ -1,0 +1,18 @@
+<!--pages/tabs/travel/travel.wxml-->
+<nav text="旅游" is_return="{{false}}"></nav>
+<view class="box">
+    <view class="list" wx:for="{{5}}" wx:key="index">
+        <image class="img" src="https://oldman.tuixiu100.com/upload/20200810/f0d7fd2d02e3eaed2163271c83d3ad8b.jpg"></image>
+        <view class="title two">水电费控打扫房间sad撒旦法阿道夫</view>
+        <view class="item">
+            <view>山东矿机佛</view>
+            <view>山东矿</view>
+            <view>山东矿撒旦法</view>
+        </view>
+        <view class="price">
+            <view class="price-l"><text>¥</text>15151起</view>
+            <view class="price-r">131人已地方</view>
+        </view>
+    </view>
+</view>
+<tab tabCount="{{1}}" ></tab>

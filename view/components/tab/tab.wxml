@@ -1,0 +1,23 @@
+<view  class="tab-box {{isX?'tab-isX':''}}" >
+  <view class="tabBox">
+    <view class="tabList {{tabCount!==index?'tabListColor':''}}" wx:for="{{list}}" wx:key="index" catchtap="tabEvent" data-index="{{index}}">
+      <view hover-class="none" url="{{item.url}}" open-type="switchTab"  class="tab-item" wx:if="{{index!==2}}">
+        {{item.name}}
+        <view class="tab-empty" wx:if="{{tabCount===index}}"></view>
+        <!-- 红点 -->
+        <view class="tab-reg" wx:if="{{index===3&&unread>0}}">{{unread}}</view>
+      </view>
+      <!-- 中间 -->
+      <view hover-class="none" url="{{item.url}}" open-type="switchTab" wx:if="{{index===2}}" class="tab-center">
+        <image hidden="{{tabCount===2}}" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/index/add.png"></image>
+        <image hidden="{{tabCount!==2}}" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/index/add2.png"></image>
+      </view>
+      
+    </view>
+  </view>
+</view>
+<!-- <login id="login"></login> -->
+<!-- 使用
+tabCount：目前选择的下标
+tabIdex：选择后触发的事件
+<tab tabCount="{{tabCount}}" bind:tabIdex="tabIdex" id="icons"></tab> -->

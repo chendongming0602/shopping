@@ -1,0 +1,48 @@
+<view class="navBg" style="height:{{CustomBar}}px">
+  <view style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px" class="contentFixed" >
+    <!-- 首页 -->
+    <view wx:if="{{text}}" class="nav-title">
+      <navigator wx:if="{{is_return}}" hover-class="none" open-type="navigateBack">
+        <image  class="img" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/index/return.png"></image>
+      </navigator>
+      <view wx:else class="img"></view>
+      {{text}}
+    </view>
+    <slot wx:else></slot>
+  </view>
+</view>
+
+<!-- 使用
+  引入页面即可
+  注意兼容屏幕
+  app.js需要添加参数：
+
+  nav: {//自定义导航
+    Custom:{},
+    CustomBar:64,
+    StatusBar:20
+  },
+
+  添加事件
+  navEvent(){
+    return new Promise((resolve,reject)=>{
+      if(this.nav.is) return resolve(this.nav);
+      wx.getSystemInfo({//自定义导航
+        success: e => {
+          this.nav.StatusBar = e.statusBarHeight;
+          let capsule = wx.getMenuButtonBoundingClientRect();
+          if (capsule) {
+            this.nav.Custom = capsule;
+            this.nav.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;//整体高度
+          } else {
+            this.nav.CustomBar = e.statusBarHeight + 50;//整体高度
+          };
+          this.nav.is=true;
+          resolve(this.nav)
+          // console.log(this.nav)
+        }
+      });
+    });
+  },
+
+ -->

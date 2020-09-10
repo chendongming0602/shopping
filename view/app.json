@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/tabs/travel/travel",
+    "pages/tabs/index/index",
+    "pages/tabs/add/add",
+    "pages/tabs/info/info",
     "pages/goods_cate/goods_cate",
     "pages/order_details/index",
     "pages/user_sgin/index",
@@ -102,34 +106,30 @@
     "navigationStyle": "custom"
   },
   "tabBar": {
-    "backgroundColor": "#ffffff",
-    "color": "#282828",
-    "selectedColor": "#e93323",
+    "color": "white",
     "borderStyle": "white",
+    "backgroundColor": "white",
+    "custom": true,
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "images/1-001.png",
-        "selectedIconPath": "images/1-002.png",
-        "text": "首页"
+        "pagePath": "pages/tabs/index/index",
+        "text": ""
       },
       {
-        "pagePath": "pages/goods_cate/goods_cate",
-        "iconPath": "images/2-001.png",
-        "selectedIconPath": "images/2-002.png",
-        "text": "分类"
+        "pagePath": "pages/tabs/travel/travel",
+        "text": ""
       },
       {
-        "pagePath": "pages/order_addcart/order_addcart",
-        "iconPath": "images/3-001.png",
-        "selectedIconPath": "images/3-002.png",
-        "text": "购物车"
+        "pagePath": "pages/tabs/add/add",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/tabs/info/info",
+        "text": ""
       },
       {
         "pagePath": "pages/user/user",
-        "iconPath": "images/4-001.png",
-        "selectedIconPath": "images/4-002.png",
-        "text": "我的"
+        "text": ""
       }
     ]
   },

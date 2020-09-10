@@ -1,0 +1,4 @@
+<!--pages/tabs/index/index.wxml-->
+<nav text="首页" is_return="{{false}}"></nav>
+<text>pages/tabs/index/index.wxml</text>
+<tab tabCount="{{0}}" ></tab>

@@ -23,7 +23,9 @@
  <scroll-view scroll-top="{{scrollTop}}" scroll-y='true' scroll-with-animation="true" style='height:{{height}}px;' bindscroll="scroll">
      <view id="past0">
   <productConSwiper imgUrls="{{storeInfo.slider_image}}" videoline="{{storeInfo.video_link}}"></productConSwiper>
-  <view class='wrapper'>
+
+  <!-- 标题部分（重写） -->
+  <!-- <view class='wrapper'>
     <view class='share acea-row row-between row-bottom'>
       <view class='money font-color'>
         ￥
@@ -71,7 +73,36 @@
            </view>
         </view>
     </view>
+  </view> -->
+  <!-- 标题新版本 -->
+  <view class="t-new">
+    <view class="t-p-new">
+      <view class="t-p-r-new"><text>¥</text>1151<text>起</text></view>
+      <view>223已出行</view>
+    </view>
+    <view class="t-t-new two">打飞机哦多少积分第三方地方</view>
+    <view class="t-i-new">
+      <view>爱的高级</view>
+      <view>爱的高级</view>
+      <view>爱的高电饭锅</view>
+    </view>
+    <view class="t-pp-new">
+      <view>原价：¥1151</view>
+      <view>原价：¥1151</view>
+    </view>
+    <view class="t-e-new"></view>
+    <view class="t-s-new">
+      <view>
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/site_logo.png"></image>
+        看送达方可的哦
+      </view>
+      <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+    <view class="t-ss-new">到封面官方</view>
   </view>
+
+
+
   <view class='attribute acea-row row-between-wrapper' bindtap='selecAttr' wx:if='{{productAttr.length}}'>
     <view>{{attr}}：
       <text class='atterTxt'>{{attrValue}}</text>

@@ -24,6 +24,13 @@ Component({
     this.videoContext = wx.createVideoContext('myVideo',this);
   },
   methods: {
+    img_pre(e){
+      let {url}=e.currentTarget.dataset;
+      wx.previewImage({
+        current:url,
+        urls: this.data.imgUrls,
+      });
+    },
     bindPause:function(){
       this.videoContext.play();
        this.setData({

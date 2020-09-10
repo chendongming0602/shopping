@@ -87,6 +87,42 @@ App({
     userInfo:{},
     loginType:'routine'
   },
+  nav: {//自定义导航
+    Custom:{},
+    CustomBar:64,
+    StatusBar:20,
+    safeArea:{
+      bottom: 667,
+      height: 647,
+      left: 0,
+      right: 375,
+      top: 20,
+      width: 375,
+    },
+    is:false,
+    isX:false
+  },
+  navEvent(){
+    return new Promise((resolve,reject)=>{
+      if(this.nav.is) return resolve(this.nav);
+      wx.getSystemInfo({//自定义导航
+        success: e => {
+          -1 < e.model.indexOf("iPhone X") && (this.nav.isX = !0);
+          this.nav.StatusBar = e.statusBarHeight;
+          let capsule = wx.getMenuButtonBoundingClientRect();
+          if (capsule) {
+            this.nav.Custom = capsule;
+            this.nav.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;//整体高度
+          } else {
+            this.nav.CustomBar = e.statusBarHeight + 50;//整体高度
+          };
+          this.nav.is=true;
+          resolve(this.nav)
+          // console.log(this.nav)
+        }
+      });
+    });
+  },
   /**
    * 聊天事件快捷注册
    * 
