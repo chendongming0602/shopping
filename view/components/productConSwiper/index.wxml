@@ -14,7 +14,7 @@
             </swiper-item>
             <block wx:for="{{imgUrls}}" wx:key='index'> 
                    <swiper-item>
-                <image catchtap="img_pre" data-url="{{item}}" src="{{item}}" class="slide-image"/>
+                <image mode="aspectFill" catchtap="img_pre" data-url="{{item}}" src="{{item}}" class="slide-image"/>
               </swiper-item>
             </block>
         </swiper>

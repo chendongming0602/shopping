@@ -80,7 +80,7 @@
       <view class="t-p-r-new"><text>¥</text>1151<text>起</text></view>
       <view>223已出行</view>
     </view>
-    <view class="t-t-new two">打飞机哦多少积分第三方地方</view>
+    <view class="t-t-new two">dsf哦多少积分第三方地方</view>
     <view class="t-i-new">
       <view>爱的高级</view>
       <view>爱的高级</view>
@@ -100,15 +100,28 @@
     </view>
     <view class="t-ss-new">到封面官方</view>
   </view>
+  <!-- 新套餐 -->
+  <view class="t-tc">
+    <view class="t-tc-t" bindtap='selecAttr' wx:if='{{productAttr.length}}'>
+      <view>团期套餐选择</view>
+      <view>请依据自己的时间选择心仪套餐</view>
+      <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+    <view wx:for="{{2}}" wx:key="index" class="t-tc-i {{index==1?'t-tc-i-a':''}}" >
+      <view>09/08日 </view>
+      <view>A套餐：奢华3日-五星香格里拉</view>
+    </view>
+  </view>
 
-
-
-  <view class='attribute acea-row row-between-wrapper' bindtap='selecAttr' wx:if='{{productAttr.length}}'>
+  <!-- 旧套餐 -->
+  <!-- <view class='attribute acea-row row-between-wrapper' bindtap='selecAttr' wx:if='{{productAttr.length}}'>
     <view>{{attr}}：
       <text class='atterTxt'>{{attrValue}}</text>
     </view>
     <view class='iconfont icon-jiantou'></view>
-  </view>
+  </view> -->
+
+
   <!-- <view class="store-info" wx:if='{{systemStore.id && storeSelfMention}}'>
     <view class="acea-row row-between-wrapper store-box" bindtap="showStoreList">
       <view class="title">门店信息</view>
@@ -138,7 +151,7 @@
   </view>
   <view class='userEvaluation' id="past1">
     <view class='title acea-row row-between-wrapper'>
-      <view>用户评价({{replyCount}})</view>
+      <view class="e-title">用户评价({{replyCount}})</view>
       <navigator class='praise' hover-class='none' url='/pages/goods_comment_list/index?product_id={{id}}'>
         <text class='font-color'>{{replyChance}}%</text>好评率
         <text class='iconfont icon-jiantou'></text>
@@ -147,25 +160,27 @@
     <userEvaluation reply="{{reply}}"></userEvaluation>
   </view>
    <view class="superior" wx:if="{{good_list.length}}" id="past2">
-      <view class="title acea-row row-center-wrapper">
+      <!-- <view class="title acea-row row-center-wrapper">
         <image src="/images/ling.png"></image>
-        <view class="titleTxt">优品推荐</view>
+        <view class="titleTxt">猜你喜欢</view>
         <image src="/images/ling.png"></image>
-      </view>
+      </view> -->
+      <view class="liked-title">猜你喜欢</view>
       <view class="slider-banner banner">
         <swiper indicator-dots="true"
             autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#999" indicator-active-color="#e93323" style="height:{{clientHeight+'px'}}">
           <swiper-item wx:for="{{good_list}}" wx:for-item='item' wx:for-index='indexw' wx:key='index'>
             <view class="list acea-row row-middle" id="list{{indexw}}">
-              <view class="item" wx:for="{{item.list}}" wx:key='index' wx:for-item='val' bindtap="goDetail" data-items='{{val}}'>
+              <view  wx:for="{{item.list}}" wx:key='index' wx:for-index="val_index" wx:for-item='val' bindtap="goDetail"  data-items='{{val}}' class="item {{val_index%2===1?'val_index':''}}">
                   <view class="pictrue">
-                    <image src="{{val.image}}"></image>
+                    <image mode="aspectFill" src="{{val.image}}"></image>
                      <text class="pictrue_log pictrue_log_class" wx:if="{{val.activity && val.activity.type ==='1'}}">秒杀</text>
                     <text class="pictrue_log pictrue_log_class" wx:if="{{val.activity && val.activity.type === '2'}}">砍价</text>
                     <text class="pictrue_log pictrue_log_class" wx:if="{{val.activity && val.activity.type === '3'}}">拼团</text>
                   </view>
-                  <view class="name line1">{{val.store_name}}</view>
-                  <view class="money font-color">¥{{val.price}}</view>
+                  <view class="name two val-title">{{val.store_name}}</view>
+                  <view class="val_cx">222人已出行</view>
+                  <view class="money">¥{{val.price}}</view>
               </view>
             </view>
           </swiper-item>
@@ -174,14 +189,30 @@
       </view>
     </view>
   <view class='product-intro' id="past3">
-    <view class='title'>产品介绍</view>
+    <view class='liked-title'>产品介绍</view>
     <view class='conter'>
       <template is="wxParse" data="{{wxParseData:description.nodes}}" />
     </view>
   </view>
   <view style='height:120rpx;'></view>
    </scroll-view>
-  <view class='footer acea-row row-between-wrapper'>
+   <!-- 新购物按钮 -->
+   <view class="f-new">
+    <button class="f-v-new">
+      <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/service.png"></image>
+      客服
+    </button>
+    <button class="f-v-new">
+      <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/share.png"></image>
+      分享
+    </button>
+    <view>
+      立即预定
+    </view>
+   </view>
+
+   <!-- 旧购物按钮 -->
+  <!-- <view class='footer acea-row row-between-wrapper'>
     <button open-type="contact" hover-class='none' class='item ' send-message-title="{{storeInfo.store_name}}" send-message-img="{{storeInfo.image}}" send-message-path="/pages/goods_details/index?id={{storeInfo.id}}" show-message-card>
     <view class='iconfont icon-kefu'></view>
     <view>客服</view>
@@ -208,7 +239,8 @@
         <button class='buy bnts bg-color-hui'>已售罄</button>
       </form>
     </view>
-  </view>
+  </view> -->
+
   <shareRedPackets sharePacket="{{sharePacket}}" bind:listenerActionSheet="listenerActionSheet"></shareRedPackets>
 </view>
 <!-- 分享按钮 -->
@@ -234,6 +266,9 @@
 <canvas class="canvas" canvas-id='myCanvas' wx:if="{{canvasStatus}}"></canvas>
 <!-- 组件 -->
 <product-window iSplus='{{iSplus}}' attribute='{{attribute}}' productAttr="{{productAttr}}" productSelect="{{productSelect}}" bind:myevent="onMyEvent" bind:ChangeAttr="ChangeAttr" bind:ChangeCartNum="ChangeCartNum" id='product-window' bind:iptCartNum="iptCartNum" ></product-window>
+
+<popDetail id="pop"></popDetail>
+
 <coupon-list-window coupon='{{coupon}}' bind:ChangCouponsClone="ChangCouponsClone" bind:ChangCoupons="ChangCoupons"></coupon-list-window>
 <authorize bind:onLoadFun="onLoadFun" isAuto="{{isAuto}}" iShidden="{{iShidden}}"></authorize>
 <!-- html转wxml -->

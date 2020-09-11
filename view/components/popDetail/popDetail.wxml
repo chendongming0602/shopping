@@ -1,0 +1,41 @@
+<view class="{{direction==='center'?'centers':''}}" wx:if="{{direction==='center'?open:true}}">
+    <view class="product-window {{open ? 'on' : ''}} {{direction}}" style="width:{{width}}%;" >
+
+        <!-- <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/index/close.png"  class="iconfont" wx:if="{{is_close}}" catchtap="close"></image> -->
+        <view class="pop-top">
+            <image mode="aspectFill" src="http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png"></image>
+            <view class="pop-title">
+                <view class="two">兰州出发-跟团游 早订 享优惠寻梦香巴拉…</view>
+                <view><text>¥</text>23489</view>
+                <view>库存243件</view>
+            </view>
+        </view>
+        <view class="pop-tc">套餐</view>
+        <view class="pop-item pop-item-a" wx:for="{{2}}" wx:key="index" >
+            <view>09/08日 </view>
+            <view>A套餐：奢华3日-五星香格里拉</view>
+        </view>
+
+        <view class="pop-sum">
+            <view class="pop-sum-t">成人</view>
+            <view class="pop-sum-s">
+                <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/subtract.png"></image>
+                <input value="1"></input>
+                <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/plus.png"></image>
+            </view>
+        </view>
+        <view class="pop-hint">如有儿童随行，请咨询客服具体情况</view>
+        <view class="but" style="margin-top:30rpx">立即购买</view>
+    </view>
+    <view class="mask" catch:touchmove catchtap="close" wx:if="{{is_mask&&open}}"></view>
+</view>
+
+<!-- 
+
+    通过 this.selectComponent("#pop").show();开启
+    direction:方向（below;up;left;right）
+    width:显示内容宽度
+    is_close：是否显示关闭按钮
+    is_mask：是否显示遮罩层
+    open:是否打开弹窗
+ -->

@@ -44,12 +44,30 @@ padding:2rpx 8rpx 3rpx;border-radius:200rpx;top:-10rpx;right:-10rpx;}
 .product-con .superior .slider-banner swiper{height:100%;width:100%;}
 .product-con .superior .slider-banner swiper-item{height:100%;}
 .product-con .superior .slider-banner .list {width: 100%;}
-.product-con .superior .slider-banner .list .item {width: 215rpx;margin: 0 22rpx 30rpx 0;
+.product-con .superior .slider-banner .list .item {width: 330rpx;margin: 0 30rpx 30rpx 0;
   font-size: 26rpx;}
+.product-con .superior .slider-banner .list .val_index {
+  margin-right: 0;
+}
+.val-title{
+  font-size: 32rpx;
+  color: #333;
+}
 .product-con .superior .slider-banner .list .item:nth-of-type(3n) {margin-right: 0;}
-.product-con .superior .slider-banner .list .item .pictrue {width: 100%;height: 215rpx;position: relative;}
+.product-con .superior .slider-banner .list .item .pictrue {width: 100%;height: 330rpx;position: relative;}
 .product-con .superior .slider-banner .list .item .pictrue image {width: 100%;height: 100%;
-  border-radius: 6rpx;}
+  border-radius: 12rpx;}
+.money{
+  color: var(--price-c);
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+.val_cx{
+  color: var(--gray);
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
 .product-con .superior .slider-banner .list .item .name {color: #282828;margin-top: 12rpx;}
 .product-con .superior .slider-banner .swiper-pagination-bullet {background-color: #999;}
 .product-con .superior .slider-banner .swiper-pagination-bullet-active {background-color: #e93323;}
@@ -115,8 +133,15 @@ background-color:#fff;padding:8rpx 0;border-radius:0;margin:0;line-height:2;}
 }
 .mask{z-index:100!important;}
 
+
+
+
 .t-new{
-  border-radius: 30rpx 32rpx 0 0;
+  border-radius: 30rpx 30rpx 0 0;
+  background: #fff;
+  position: relative;
+  top: -18rpx;
+  padding-top: 10rpx;
 }
 .t-new>view{
   padding: 20rpx 30rpx 0;
@@ -132,7 +157,7 @@ background-color:#fff;padding:8rpx 0;border-radius:0;margin:0;line-height:2;}
 }
 .t-p-new .t-p-r-new{
   font-size: 40rpx;
-  color: #E44545;
+  color: var(--price-c);
   font-weight: bold;
   letter-spacing: 0px;
 }
@@ -142,7 +167,7 @@ background-color:#fff;padding:8rpx 0;border-radius:0;margin:0;line-height:2;}
 }
 .t-p-r-new text:nth-child(1){
   font-size: 24rpx;
-  color: #E44545;
+  color: var(--price-c);
 }
 .t-t-new{
   font-size: 36rpx;
@@ -193,10 +218,98 @@ background-color:#fff;padding:8rpx 0;border-radius:0;margin:0;line-height:2;}
   margin-right: 5rpx;
 }
 .t-s-new>image{
-  width: 30rpx;
+  width: 20rpx;
   height: 30rpx;
 }
-.t-ss-new{
+.t-new .t-ss-new{
   font-size: 32rpx;
   color: #575757;
+  padding-bottom: 20rpx;
+}
+.t-tc{
+  padding: 30rpx;
+  background: #fff;
+}
+.t-tc-t{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.t-tc-t view:nth-child(1){
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+.t-tc-t view:nth-child(2){
+  font-size: 28rpx;
+  color: var(--gray);
+}
+.t-tc-t image{
+  width: 20rpx;
+  height: 30rpx;
+}
+.t-tc-i{
+  margin-top: 30rpx;
+  border-radius: 8rpx;
+  padding: 25rpx;
+  border: 2rpx solid #E4E4E4;
+  background: #fff;
+}
+.t-tc-i view{
+  color: #575757;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.t-tc-i-a{
+  background: #FFFBE6;
+  border: 2rpx solid #D1B315;
+}
+.t-tc-i-a view{
+  color: #675704;
+}
+.e-title{
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+}
+.liked-title{
+  font-weight: bold;
+  font-size: 36rpx;
+  padding: 40rpx 30rpx 30rpx;
+}
+
+.f-new{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16rpx 30rpx 30rpx 60rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.f-new .f-v-new{
+  margin: 0;
+  padding: 0;
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 60rpx;
+  min-width: 65rpx;
+  text-align: center;
+}
+.f-new  image{
+  width: 54rpx;
+  height: 54rpx;
+  display: block;
+}
+.f-new view:nth-child(3){
+  background: var(--yellow);
+  width: 430rpx;
+  line-height: 88rpx;
+  border-radius: 6rpx;
+  text-align: center;
+  font-size:32rpx;
+  color: #333;
+  font-weight: bold;
 }

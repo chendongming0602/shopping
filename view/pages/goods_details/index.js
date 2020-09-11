@@ -29,7 +29,21 @@ Page({
     animated: false,//购物车动画
     id: 0,//商品id
     replyCount: 0,//总评论数量
-    reply: [],//评论列表
+    reply: [
+      // {
+      //   avatar:"http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png",
+      //   nickname:"6544",
+      //   add_time:"1541561111",
+      //   suk:"水电费控",
+      //   comment:"水电费控",
+      //   merchant_reply_content:"水电费控",
+      //   suk:"水电费控",
+      //   pics:[
+      //     "http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png",
+      //     "http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png",
+      //   ]
+      // }
+    ],//评论列表
     storeInfo: {},//商品详情
     productAttr: [],//组件展示属性
     productValue: [],//系统属性
@@ -373,10 +387,10 @@ Page({
     getProductDetail(that.data.id).then(res => {
       var storeInfo = res.data.storeInfo;
       var good_list = res.data.good_list || [];
-      var count = Math.ceil(good_list.length / 6);
+      var count = Math.ceil(good_list.length / 4);
       var goodArray = new Array();
       for (var i = 0; i < count; i++) {
-        var list = good_list.slice(i * 6, i * 6 + 6);
+        var list = good_list.slice(i * 4, i * 4 + 4);
         if (list.length) goodArray.push({ list: list });
       }
       that.setData({
@@ -547,6 +561,7 @@ Page({
    * 打开属性插件
   */
   selecAttr: function () {
+    return this.selectComponent("#pop").show();
     if (app.globalData.isLog === false)
       this.setData({ isAuto: true, iShidden: false })
     else
