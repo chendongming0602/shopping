@@ -2,6 +2,7 @@
   "usingComponents": {
     "navbar": "/components/navbar/index",
     "popDetail": "/components/popDetail/popDetail",
+    "pop": "/components/pop/pop",
     "shareRedPackets": "/components/share-red-packets/index",
     "productConSwiper": "/components/productConSwiper/index",
     "userEvaluation": "/components/userEvaluation/index",

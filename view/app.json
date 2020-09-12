@@ -70,6 +70,14 @@
   ],
   "subPackages": [
     {
+      "root":"pages/order",
+      "name":"order",
+      "pages":[
+        "fill/fill",
+        "payment/payment"
+      ]
+    },
+    {
       "root": "pages/activity",
       "name": "activity",
       "pages": [

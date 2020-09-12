@@ -74,7 +74,40 @@ padding:2rpx 8rpx 3rpx;border-radius:200rpx;top:-10rpx;right:-10rpx;}
 @import "/wxParse/wxParse.wxss";
 button{padding:0;margin:0;line-height:normal;background-color:#fff;}
 button::after{border:0;}
-action-sheet-item{padding: 0;height:240rpx;align-items:center;display:flex;}
+action-sheet-item{
+  padding: 40rpx;
+}
+.active-sheet{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40rpx 110rpx 50rpx;
+  border-bottom: 1rpx solid #E4E4E4;
+}
+
+.active-title{
+  font-size: 36rpx;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+.active-sheet button{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.active-sheet image{
+  width: 95rpx;
+  height: 95rpx;
+  display: block;
+  margin: 0 auto;
+}
+.active-qx{
+  text-align: center;
+  padding: 25rpx;
+  font-size: 28rpx;
+  color: #4D4D4D;
+}
 .contact{font-size:16px;width:50%;
 background-color:#fff;padding:8rpx 0;border-radius:0;margin:0;line-height:2;}
 .contact::after{border:none;}
@@ -215,7 +248,7 @@ background-color:#fff;padding:8rpx 0;border-radius:0;margin:0;line-height:2;}
 .t-s-new view image{
   width: 30rpx;
   height: 36rpx;
-  margin-right: 5rpx;
+  margin-right: 10rpx;
 }
 .t-s-new>image{
   width: 20rpx;

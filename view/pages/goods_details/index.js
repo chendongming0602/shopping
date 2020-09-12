@@ -7,7 +7,9 @@ import util from '../../utils/util.js';
 import wxh from '../../utils/wxh.js';
 import { CACHE_LONGITUDE, CACHE_LATITUDE } from '../../config.js';
 const app = getApp();
-
+/*旧订单页面
+pages/order_confirm/index?cartId=5
+*/
 Page({
 
   /**
@@ -561,7 +563,7 @@ Page({
    * 打开属性插件
   */
   selecAttr: function () {
-    return this.selectComponent("#pop").show();
+    return this.selectComponent("#popDetail").show();
     if (app.globalData.isLog === false)
       this.setData({ isAuto: true, iShidden: false })
     else
@@ -677,8 +679,17 @@ Page({
   listenerActionSheet: function () {
     if (app.globalData.isLog === false)
       this.setData({ isAuto: true, iShidden: false });
-    else
-      this.setData({ actionSheetHidden: !this.data.actionSheetHidden })
+    else{
+      this.popShow();this.setData({ actionSheetHidden: !this.data.actionSheetHidden })
+    }
+  },
+  //添加修改分享弹窗
+  popShow(){
+    if(this.data.actionSheetHidden)this.selectComponent("#pop").show();
+    else this.selectComponent("#pop").close();
+  },
+  popClose(){
+    this.setData({ actionSheetHidden: !this.data.actionSheetHidden })
   },
   //隐藏海报
   posterImageClose: function () {
@@ -757,22 +768,24 @@ Page({
             arr2[2] = msgPromotionCode;
             if (arr2[2] == '') return app.Tips({ title: '海报二维码生成失败！' });
             util.PosterCanvas(arr2, that.data.storeInfo.store_name, that.data.storeInfo.price, function (tempFilePath) {
+              that.selectComponent("#pop").close();
               that.setData({
                 posterImage: tempFilePath,
                 posterImageStatus: true,
                 canvasStatus: false,
-                actionSheetHidden: !that.data.actionSheetHidden
+                // actionSheetHidden: !that.data.actionSheetHidden
               })
             });
           });
         } else {
           //生成推广海报
           util.PosterCanvas(arr2, that.data.storeInfo.store_name, that.data.storeInfo.price, function (tempFilePath) {
+            that.selectComponent("#pop").close();
             that.setData({
               posterImage: tempFilePath,
               posterImageStatus: true,
               canvasStatus: false,
-              actionSheetHidden: !that.data.actionSheetHidden
+              // actionSheetHidden: !that.data.actionSheetHidden
             })
           });
         }
@@ -822,7 +835,8 @@ Page({
    */
   onShareAppMessage: function () {
     var that = this;
-    that.setData({ actionSheetHidden: !that.data.actionSheetHidden });
+    that.selectComponent("#pop").close();
+    // that.setData({ actionSheetHidden: !that.data.actionSheetHidden });
     userShare();
     return {
       title: that.data.storeInfo.store_name || '',

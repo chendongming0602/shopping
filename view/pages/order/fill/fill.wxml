@@ -1,0 +1,89 @@
+<view class="f-bg"></view>
+<view class="f-top">
+    <view class="f-title">
+        受到收到反馈啊速度加快佛啊上的飞机撒旦反抗
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+    <view class="f-tc f-tc-one">
+        <text>套餐类型：</text>
+        <view>大时间哦单间房分类</view>
+    </view>
+    <view class="f-tc">
+        <text>套餐类型：</text>
+        <view>大时间哦单间房分类</view>
+    </view>
+    <view class="f-tc">
+        <text>套餐类型：</text>
+        <view>大时间哦单间房分类</view>
+    </view>
+    <view class="pop-sum">
+        <view class="pop-sum-t">成人</view>
+        <view class="pop-sum-s">
+            <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/subtract.png"></image>
+            <input value="1"></input>
+            <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/plus.png"></image>
+        </view>
+    </view>
+    <view class="f-price">
+        <text>库存：</text>
+        3
+        <text>单价：</text>
+        ¥2937543
+    </view>
+    <view class="f-xz">
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/attention.png"></image>
+        <view>查看预定须知</view>
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+</view>
+
+<view class="f-r">
+    <view class="f-r-title">联系人系信息</view>
+    <view class="f-r-input">
+        <view>姓名</view>
+        <input value="落实到放假"></input>
+    </view>
+    <view class="f-r-input">
+        <view>手机号</view>
+        <input value="落实到放假"></input>
+    </view>
+    <view class="f-r-input f-r-input-on">
+        <view>身份证</view>
+        <input value="落实到放假"></input>
+    </view>
+</view>
+<view class="f-hint">
+    <view class="f-h-title">温馨提示</view>
+    <view>1、请确认所填写信息与所持证件信息一致， 因信息不完整，填写不正确造成的额外损 失、保险拒赔等问题，我司不承担相应责 任，需由客人自行承担。 </view>
+    <view>2、大于2周岁不满12周岁的儿童不可使用 出生证明，请使用身份证、户口簿等，乘机 请携带填写的相应证件。</view>
+    <view> 3、本产品不支持孕妇出游  </view>
+    <view>4、不支持全是未成年人出游</view>
+    <view>5、出游人中有年龄高于70岁(含)的游客不 接收，敬请谅解!</view>
+</view>
+<view class="f-yes">
+    <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/yes.png"></image>
+    <view>
+        请您仔细阅读<text>电子合同、线路标准退预订 须知</text> 点击去付款即代表您已阅读并同意条 款内容。
+    </view>
+</view>
+<view class="f-but">
+    <view class="f-but-l">
+        <view class="f-but-ll">
+            实付款
+            <view catchtap="popEvent">明细</view>
+            <image catchtap="popEvent" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+        </view>
+        <view class="f-but-lr"> <text>¥</text>13453 </view>
+    </view>
+    <view class="f-but-r">立即支付</view>
+</view>
+<pop id="pop" is_close="{{false}}">
+    <view class="pop-top">
+        <view>成人</view>
+        <view>23434<text>x2</text></view>
+    </view>
+    <view class="pop-bot">
+        <view>实付款</view>
+        <view>¥<text>23743</text></view>
+    </view>
+</pop>

@@ -30,7 +30,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-        open:true
+        open:false
     },
 
     /**
@@ -42,6 +42,7 @@ Component({
         },
         close() {
             this.setData({open:false});
+            this.triggerEvent("popClose")
         }
     }
 })

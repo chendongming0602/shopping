@@ -118,6 +118,27 @@
 					"pathName": "pages/activity/goods_seckill_details/index",
 					"query": "id=57&time=1591329600&status=1&scene=329",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评分",
+					"pathName": "pages/goods_comment_list/index",
+					"query": "product_id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "填写订单",
+					"pathName": "pages/order/fill/fill",
+					"query": "product_id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付成功",
+					"pathName": "pages/order/payment/payment",
+					"query": "product_id=74",
+					"scene": null
 				}
 			]
 		}

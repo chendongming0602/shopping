@@ -198,11 +198,18 @@
    </scroll-view>
    <!-- 新购物按钮 -->
    <view class="f-new">
-    <button class="f-v-new">
+    <button class="f-v-new" 
+      hover-class='none'
+      open-type="contact"
+      send-message-title="{{storeInfo.store_name}}"
+      send-message-img="{{storeInfo.image}}" 
+      send-message-path="/pages/goods_details/index?id={{storeInfo.id}}" 
+      show-message-card
+    >
       <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/service.png"></image>
       客服
     </button>
-    <button class="f-v-new">
+    <button class="f-v-new" bindtap='listenerActionSheet' hover-class='none'>
       <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/share.png"></image>
       分享
     </button>
@@ -244,18 +251,35 @@
   <shareRedPackets sharePacket="{{sharePacket}}" bind:listenerActionSheet="listenerActionSheet"></shareRedPackets>
 </view>
 <!-- 分享按钮 -->
-<action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" class='pro-wrapper' hover-class='none'>
+<!-- <action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet" class='pro-wrapper' hover-class='none'>
   <action-sheet-item hover-class='none'>
-    <button open-type="share" class='contact' hover-class='none'>
-      <view class='iconn'></view>
-      发送给朋友
+    <view class="active-title">分享到</view>
+    <view class="active-sheet">
+      <button open-type="share" class='contact' hover-class='none'>
+        <view class='iconn'></view>
+        微信好友
+      </button>
+      <button class='contact' bindtap='goPoster' hover-class='none'>
+        <view class='iconn iconn1'></view>
+        生成海报
+      </button>
+    </view>
+  </action-sheet-item>
+</action-sheet> -->
+<pop is_close="{{false}}" id="pop" bind:popClose="popClose">
+  <view class="active-title">分享到</view>
+  <view class="active-sheet">
+    <button open-type="share" hover-class='none'>
+      <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/wx.png"></image>
+      微信好友
     </button>
-    <button class='contact' bindtap='goPoster' hover-class='none'>
-      <view class='iconn iconn1'></view>
+    <button  bindtap='goPoster' hover-class='none'>
+      <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/hb.png"></image>
       生成海报
     </button>
-  </action-sheet-item>
-</action-sheet>
+  </view>
+  <view class="active-qx" catchtap="popShow">取消</view>
+</pop>
 <!-- 海报展示 -->
 <view class='poster-pop' wx:if="{{posterImageStatus}}">
   <image src='/images/poster-close.png' class='close' bindtap='posterImageClose'></image>
@@ -267,7 +291,7 @@
 <!-- 组件 -->
 <product-window iSplus='{{iSplus}}' attribute='{{attribute}}' productAttr="{{productAttr}}" productSelect="{{productSelect}}" bind:myevent="onMyEvent" bind:ChangeAttr="ChangeAttr" bind:ChangeCartNum="ChangeCartNum" id='product-window' bind:iptCartNum="iptCartNum" ></product-window>
 
-<popDetail id="pop"></popDetail>
+<popDetail id="popDetail"></popDetail>
 
 <coupon-list-window coupon='{{coupon}}' bind:ChangCouponsClone="ChangCouponsClone" bind:ChangCoupons="ChangCoupons"></coupon-list-window>
 <authorize bind:onLoadFun="onLoadFun" isAuto="{{isAuto}}" iShidden="{{iShidden}}"></authorize>

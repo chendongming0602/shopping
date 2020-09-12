@@ -1,0 +1,7 @@
+{
+  "navigationStyle":"default",
+  "navigationBarTitleText":"填写订单",
+  "usingComponents": {
+    "pop":"/components/pop/pop"
+  }
+}
