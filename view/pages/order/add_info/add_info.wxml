@@ -1,0 +1,17 @@
+<view class="add-input">
+    <view>姓名</view>
+    <input value="大幅度"></input>
+</view>
+<view class="add-input">
+    <view>姓名</view>
+    <input value="大幅度"></input>
+</view>
+<view class="add-input add-input-no">
+    <view>身份证</view>
+    <input value="大幅度"></input>
+</view>
+
+<view class="add-but">
+    <view class="but">立即保存</view>
+    <view class="add-delete but">删除常用旅客</view>
+</view>

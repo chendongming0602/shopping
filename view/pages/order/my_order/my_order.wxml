@@ -1,0 +1,19 @@
+<view class="o-hint">你有一条待出行订单，请记得准时出行哦～</view>
+<view class="o-list">
+    <view class="o-item">
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/all_order.png"></image>
+        全部订单
+    </view>
+    <view class="o-item">
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/trip.png"></image>
+        全部订单
+    </view>
+    <view class="o-item">
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/remark.png"></image>
+        全部订单
+    </view>
+    <view class="o-item">
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/info.png"></image>
+        全部订单
+    </view>
+</view>

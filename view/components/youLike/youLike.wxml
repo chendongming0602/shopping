@@ -1,0 +1,31 @@
+<view class="product-con">
+    <view class="superior" wx:if="{{good_list.length}}">
+      <!-- <view class="title acea-row row-center-wrapper">
+        <image src="/images/ling.png"></image>
+        <view class="titleTxt">猜你喜欢</view>
+        <image src="/images/ling.png"></image>
+      </view> -->
+      <view class="liked-title">猜你喜欢</view>
+      <view class="slider-banner banner">
+        <swiper indicator-dots="true"
+            autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#999" indicator-active-color="#e93323" style="height:{{clientHeight+'px'}}">
+          <swiper-item wx:for="{{good_list}}" wx:for-item='item' wx:for-index='indexw' wx:key='index'>
+            <view class="list acea-row row-middle" id="list{{indexw}}">
+              <view  wx:for="{{item.list}}" wx:key='index' wx:for-index="val_index" wx:for-item='val' bindtap="goDetail"  data-items='{{val}}' class="item {{val_index%2===1?'val_index':''}}">
+                  <view class="pictrue">
+                    <image mode="aspectFill" src="{{val.image}}"></image>
+                     <text class="pictrue_log pictrue_log_class" wx:if="{{val.activity && val.activity.type ==='1'}}">秒杀</text>
+                    <text class="pictrue_log pictrue_log_class" wx:if="{{val.activity && val.activity.type === '2'}}">砍价</text>
+                    <text class="pictrue_log pictrue_log_class" wx:if="{{val.activity && val.activity.type === '3'}}">拼团</text>
+                  </view>
+                  <view class="name two val-title">{{val.store_name}}</view>
+                  <view class="val_cx">222人已出行</view>
+                  <view class="money">¥{{val.price}}</view>
+              </view>
+            </view>
+          </swiper-item>
+          <view class="swiper-pagination" slot="pagination"></view>
+        </swiper>
+      </view>
+  </view>
+</view>

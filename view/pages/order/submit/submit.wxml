@@ -1,0 +1,26 @@
+<view class="f-bg"></view>
+<view class="p-yes">
+    <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/yes_two.png"></image>
+    提交成功
+</view>
+<view class="p-aff">请保持联系人信息通畅，1-3个工资日 内我们会通过电话联系您～</view>
+<view class="s-content">
+    <view class="t-s-new">
+        <view>
+            <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/site_logo.png"></image>
+            看送达方可的哦
+        </view>
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+    <view class="t-ss-new">到封面官方</view>
+    <view class="s-time"><text>营业时间：</text>撒旦教佛地方记得发</view>
+    <view class="s-time"><text>联系方式：</text>撒旦教佛地方记得发</view>
+    <view class="s-img">
+        <image src="http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png"></image>
+        <image src="http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png"></image>
+    </view>
+</view>
+<view style="height:160rpx"></view>
+<view class="p-but">
+    <view class="but">查看订单</view>
+</view>

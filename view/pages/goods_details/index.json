@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "youLike": "/components/youLike/youLike",
     "navbar": "/components/navbar/index",
     "popDetail": "/components/popDetail/popDetail",
     "pop": "/components/pop/pop",

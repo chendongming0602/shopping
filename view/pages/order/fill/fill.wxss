@@ -1,3 +1,7 @@
+page::before{
+    content: "";
+    display: table;
+}
 .f-bg{
     background: var(--yellow-bg);
     height: 585rpx;
@@ -5,10 +9,7 @@
     position: absolute;
     z-index: -1;
 }
-page::before{
-    content: "";
-    display: table;
-}
+
 .f-top{
     margin: 30rpx;
     background: #fff;
@@ -40,7 +41,6 @@ page::before{
     font-size: 28rpx;
 }
 .f-tc view{
-    color: #333;
     font-size: 28rpx;
 }
 .f-tc-one{
@@ -54,7 +54,6 @@ page::before{
 }
 .pop-sum-t{
     font-size: 36rpx;
-    color: #333;
     font-weight: bold;
 }
 .pop-sum-s{
@@ -93,7 +92,6 @@ page::before{
 }
 .f-xz view{
     font-size: 28rpx;
-    color: #333;
     flex-grow: 1;
 }
 .f-xz image:nth-child(1){
@@ -116,7 +114,6 @@ page::before{
 .f-r-title{
     font-size: 36rpx;
     font-weight: bold;
-    color: #333;
 }
 .f-r-input{
     display: flex;
@@ -134,7 +131,6 @@ page::before{
 }
 .f-r-input input{
     font-size: 32rpx;
-    color: #333;
 }
 .f-hint{
     margin: 40rpx 30rpx;
@@ -183,7 +179,6 @@ page::before{
     left: 0;
 }
 .f-but-ll{
-    color: #333;
     font-size: 28rpx;
     display: flex;
     align-items: center;
@@ -216,7 +211,6 @@ page::before{
     border-radius: 6rpx;
     text-align: center;
     font-weight: bold;
-    color: #333;
     font-size: 32rpx;
 }
 .pop-top,.pop-bot{
@@ -233,7 +227,6 @@ page::before{
 .pop-top>view:nth-child(1),.pop-bot>view:nth-child(1){
     font-weight: bold;
     font-size: 32rpx;
-    color: #333;
 }
 .pop-top>view:nth-child(2),.pop-bot>view:nth-child(2){
     color: var(--price-c);
@@ -244,7 +237,6 @@ page::before{
 }
 .pop-top text{
     font-size: 32rpx;
-    color: #333;
     margin-left: 5rpx;
 }
 .pop-bot text{

@@ -139,6 +139,48 @@
 					"pathName": "pages/order/payment/payment",
 					"query": "product_id=74",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单资料完善",
+					"pathName": "pages/order/data/data",
+					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "提交成功",
+					"pathName": "pages/order/submit/submit",
+					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "查看订单",
+					"pathName": "pages/order/look/look",
+					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加游客信息",
+					"pathName": "pages/order/info/info",
+					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "填写旅客信息",
+					"pathName": "pages/order/add_info/add_info",
+					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/order/my_order/my_order",
+					"query": "id=74",
+					"scene": null
 				}
 			]
 		}

@@ -1,0 +1,21 @@
+<view class="i-add"><text>+</text> 新增旅客</view>
+<view class="i-list">
+    <view class="i-item" wx:for="{{list}}" wx:key="index">
+        <image wx:if="{{item.is}}" class="i-select" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/yes.png"></image>
+        <image wx:else class="i-select" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/o_no.png"></image>
+        <view class="i-info">
+            <view>
+                <view>谢霆锋</view>
+                <view>谢霆锋：454545</view>
+                <view>谢霆锋:444***4485</view>
+            </view>
+            <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+        </view>
+    </view>
+</view>
+
+<view style="height:160rpx"></view>
+<view class="i-but">
+    <view>已选1/2</view>
+    <view class="but">你还需要添加1位</view>
+</view>

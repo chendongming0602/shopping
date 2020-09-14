@@ -1,0 +1,32 @@
+.o-hint{
+    color: #fff;
+    background: #F64545;
+    font-size: 32rpx;
+    padding: 20rpx 30rpx;
+}
+.o-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0rpx 30rpx ;
+    flex-wrap: wrap;
+}
+.o-item{
+    background: #fff;
+    width: 320rpx;
+    height: 320rpx;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 28rpx 0px rgba(0, 0, 0, 0.09);
+    border-radius: 16rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40rpx;
+}
+.o-item image{
+    width: 150rpx;
+    height: 150rpx;
+    margin-bottom: 18rpx;
+    display: block;
+    margin: 55rpx auto 0;
+}

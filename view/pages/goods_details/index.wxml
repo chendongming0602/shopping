@@ -159,13 +159,16 @@
     </view>
     <userEvaluation reply="{{reply}}"></userEvaluation>
   </view>
-   <view class="superior" wx:if="{{good_list.length}}" id="past2">
+ 
+  <view class="superior" wx:if="{{good_list.length}}" id="past2">
+    <!--猜你喜欢 抽成组件 -->
+    <youLike good_list="{{good_list}}"></youLike>
       <!-- <view class="title acea-row row-center-wrapper">
         <image src="/images/ling.png"></image>
         <view class="titleTxt">猜你喜欢</view>
         <image src="/images/ling.png"></image>
       </view> -->
-      <view class="liked-title">猜你喜欢</view>
+      <!-- <view class="liked-title">猜你喜欢</view>
       <view class="slider-banner banner">
         <swiper indicator-dots="true"
             autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="#999" indicator-active-color="#e93323" style="height:{{clientHeight+'px'}}">
@@ -186,8 +189,8 @@
           </swiper-item>
           <view class="swiper-pagination" slot="pagination"></view>
         </swiper>
-      </view>
-    </view>
+      </view> -->
+  </view>
   <view class='product-intro' id="past3">
     <view class='liked-title'>产品介绍</view>
     <view class='conter'>

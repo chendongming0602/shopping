@@ -348,15 +348,15 @@ Page({
     this.getList();
   },
   setClientHeight: function () {
-    if (!this.data.good_list.length) return;
-    var query = wx.createSelectorQuery().in(this);
-    query.select("#list0").boundingClientRect();
-    var that = this;
-    query.exec(function (res) {
-      that.setData({
-        clientHeight: res[0].height + 20
-      });
-    });
+    // if (!this.data.good_list.length) return;
+    // var query = wx.createSelectorQuery().in(this);
+    // query.select("#list0").boundingClientRect();
+    // var that = this;
+    // query.exec(function (res) {
+    //   that.setData({
+    //     clientHeight: res[0].height + 20
+    //   });
+    // });
   },
   infoScroll: function () {
     var that = this, topArr = [], heightArr = [];

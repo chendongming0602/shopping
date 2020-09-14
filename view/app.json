@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/user/user",
     "pages/index/index",
     "pages/tabs/travel/travel",
     "pages/tabs/index/index",
@@ -8,7 +9,6 @@
     "pages/goods_cate/goods_cate",
     "pages/order_details/index",
     "pages/user_sgin/index",
-    "pages/user/user",
     "pages/user_get_coupon/index",
     "pages/order_confirm/index",
     "pages/goods_list/goods_list",
@@ -74,7 +74,14 @@
       "name":"order",
       "pages":[
         "fill/fill",
-        "payment/payment"
+        "payment/payment",
+        "data/data",
+        "submit/submit",
+        "info/info",
+        "add_info/add_info",
+        "my_order/my_order",
+        "look/look"
+        
       ]
     },
     {

@@ -101,4 +101,5 @@ Page{
 }
 view{
   letter-spacing: 3rpx;
+  color: #333;
 }

@@ -1,0 +1,86 @@
+<view class="f-bg"></view>
+<view class="p-yes">
+    <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/yes_two.png"></image>
+    支付成功
+</view>
+<view class="p-aff">确认订单信息后请完善出行人资料</view>
+<view class="f-top">
+    <view class="f-title">
+        受到收到反馈啊速度加快佛啊上的飞机撒旦反抗
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+    <view class="f-tc f-tc-one">
+        <text>套餐类型：</text>
+        <view>大时间哦单间房分类</view>
+    </view>
+    <view class="f-tc">
+        <text>套餐类型：</text>
+        <view>大时间哦单间房分类</view>
+    </view>
+    <view class="f-tc">
+        <text>套餐类型：</text>
+        <view>大时间哦单间房分类</view>
+    </view>
+    <view class="p-sum">
+        总额
+        <view>
+            <text>¥</text>234893
+        </view>
+    </view>
+    <view class="f-xz">
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/attention.png"></image>
+        <view>查看预定须知</view>
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+</view>
+
+<view class="p-mark">
+    订单编号
+    <view>48545485</view>
+    <text>复制</text>
+</view>
+
+<view class="f-r">
+    <view class="f-r-title">联系人系信息</view>
+    <view class="f-r-input">
+        <view>姓名</view>
+        <input disabled="{{true}}" value="落实到放假"></input>
+    </view>
+    <view class="f-r-input">
+        <view>手机号</view>
+        <input disabled="{{true}}"  value="落实到放假"></input>
+    </view>
+    <view class="f-r-input f-r-input-on">
+        <view>身份证</view>
+        <input disabled="{{true}}"  value="落实到放假"></input>
+    </view>
+</view>
+<view class="l-trip">
+    <view class="l-trip-title">出行人</view>
+    <!-- <view class="l-trip-list">圣诞节覅OA撒旦教佛</view> -->
+    <view class="l-trip-sus">已登记</view>
+</view>
+<!-- 预约显示 -->
+<view class="s-content">
+    <view class="t-s-new">
+        <view>
+            <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/site_logo.png"></image>
+            看送达方可的哦
+        </view>
+        <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/right_icon.png"></image>
+    </view>
+    <view class="t-ss-new">到封面官方</view>
+    <view class="s-time"><text>营业时间：</text>撒旦教佛地方记得发</view>
+    <view class="s-time"><text>联系方式：</text>撒旦教佛地方记得发</view>
+    <view class="s-img">
+        <image src="http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png"></image>
+        <image src="http://kaifa.crmeb.net/uploads/attach/2020/03/20200319/cc87880018d90a9bed9dc9e9eef5f660.png"></image>
+    </view>
+</view>
+<view class="l-leave">
+    买家留言 时代峰峻第三方
+</view>
+<view style="height:160rpx"></view>
+<view class="p-but">
+    <view class="but">联系客服</view>
+</view>

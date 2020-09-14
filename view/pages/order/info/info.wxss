@@ -1,0 +1,73 @@
+page::before{
+    content: "";
+    display: table;
+}
+.i-add{
+    font-size: 32rpx;
+    border-radius: 18rpx;
+    margin: 40rpx 30rpx 0;
+    text-align: center;
+    line-height: 88rpx;
+    font-weight: bold;
+    background: #fff;
+}
+.i-add text{
+    font-weight: inherit;
+    font-size: 44rpx;
+}
+.i-list{
+    padding: 0 30rpx;
+
+}
+.i-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40rpx;
+}
+.i-select{
+    width: 48rpx;
+    height: 48rpx;
+    min-width: 48rpx;
+}
+.i-info{
+    margin-left: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40rpx 30rpx;
+    background: #fff;
+    flex-grow: 1;
+    border-radius: 18rpx;
+}
+.i-info image{
+    width: 20rpx;
+    height: 30rpx;
+}
+.i-info>view view{
+    font-size: 32rpx;
+    margin-top: 20rpx;
+}
+.i-info>view view:nth-child(1){
+    margin: 0;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.i-but{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16rpx 30rpx 40rpx;
+    background: #fff;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.i-but>view:nth-child(1){
+    font-size: 36rpx;
+}
+.i-but .but{
+    width: 420rpx;
+}

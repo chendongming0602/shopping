@@ -1,0 +1,29 @@
+.add-input{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 40rpx 30rpx;
+    border-bottom: 1rpx solid var(--border);
+}
+.add-input view{
+    font-size: 32rpx;
+    min-width: 120rpx;
+}
+.add-input input{
+    font-size: inherit;
+    color: var(--gray);
+    margin-left: 90rpx;
+}
+.add-input-no{
+    border: none;
+}
+.add-but{
+    margin-top: 100rpx;
+    padding: 0 30rpx;
+}
+.add-delete{
+    margin-top: 60rpx;
+    border: 2rpx solid #F64545;
+    color: #F64545;
+    background: transparent;
+}

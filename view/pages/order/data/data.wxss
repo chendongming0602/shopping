@@ -1,0 +1,120 @@
+page::before{
+    content: "";
+    display: table;
+}
+.f-bg{
+    background: var(--yellow-bg);
+    height: 585rpx;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.d-title{
+    padding: 50rpx 0;
+    text-align: center;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.d-trip{
+    margin: 0 30rpx;
+    border-radius: 18rpx;
+    background: #fff;
+    padding: 30rpx 0;
+}
+.d-trip>view{
+    padding: 0 30rpx;
+}
+.d-trip-title{
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.d-trip-add{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30rpx;
+}
+.d-trip-add>view:nth-child(1){
+    font-size: 32rpx;
+}
+
+.d-trip-add text{
+    color: var(--price-c);
+    font-size: 32rpx;
+}
+.d-trip-add>view:nth-child(2){
+    font-size: 32rpx;
+    width: 210rpx;
+    line-height: 68rpx;
+    background: #F9D726;
+    border-radius: 6rpx;
+    text-align: center;
+    font-weight: bold;
+}
+.d-trip .d-trip-list{
+    padding-top: 30rpx;
+    border-top: 1rpx solid var(--border);
+}
+.d-trip-list{
+    display: flex;
+    align-items: center;
+    margin-top: 40rpx;
+}
+.d-trip-list text{
+    font-size: 28rpx;
+    color: var(--gray);
+}
+.d-trip-list view{
+    font-size: 28rpx;
+    margin-left: 20rpx;
+}
+.d-leave{
+    margin: 40rpx 30rpx;
+    border-radius: 18rpx;
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+.d-leave view{
+    font-size: 32rpx;
+}
+.d-leave input{
+    color: var(--gray);
+    font-size: 32rpx;
+    margin-left: 20rpx;
+}
+.d-but{
+    margin: 40rpx;
+    line-height: 102rpx;
+    background: #60AAF6;
+    border-radius: 18rpx;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 36rpx;
+}
+.f-hint{
+    margin: 30rpx;
+    padding: 20rpx;
+}
+.f-hint view{
+    color: var(--gray);
+    font-size: 32rpx;
+    line-height: 50rpx;
+}
+.f-hint .f-h-title{
+    color: #F64545;
+    font-size: 36rpx;
+    font-weight: bold;
+    margin-bottom: 25rpx;
+}
+.p-but{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16rpx 30rpx 40rpx;
+    background: #fff;
+    z-index: 3;
+}

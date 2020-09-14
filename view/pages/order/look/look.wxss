@@ -23,7 +23,7 @@ page::before{
 }
 .f-bg{
     background: var(--yellow-bg);
-    height: 920rpx;
+    height: 585rpx;
     width: 100%;
     position: absolute;
     z-index: -1;
@@ -151,6 +151,82 @@ page::before{
 .f-r-input input{
     font-size: 32rpx;
 }
+
+.l-trip,.l-leave{
+    margin: 30rpx;
+    border-radius: 18rpx;
+    background: #fff;
+    padding: 30rpx;
+    font-size: 32rpx;
+}
+.l-trip-title{
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.l-trip-list{
+    margin-top: 30rpx;
+    font-size: 32rpx;
+}
+.l-trip-sus{
+    color: #F64545;
+    font-size: 32rpx;
+    margin-top: 30rpx;
+}
+.s-content{
+    margin: 40rpx 30rpx;
+    background: #fff;
+    border-radius: 18rpx;
+    padding: 30rpx 0;
+}
+.s-content>view{
+    padding: 0 30rpx;
+}
+.t-s-new{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.t-s-new view{
+    display: flex;
+    align-items: center;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.t-s-new view image{
+    width: 30rpx;
+    height: 36rpx;
+    margin-right: 10rpx;
+}
+.t-s-new>image{
+    width: 20rpx;
+    height: 30rpx;
+}
+.s-content .t-ss-new{
+    font-size: 32rpx;
+    color: #575757;
+    margin-top: 20rpx;
+    padding-bottom: 40rpx;
+    border-bottom: 1rpx solid var(--border);
+}
+.s-time{
+    font-size: 32rpx;
+    margin-top: 40rpx;
+}
+.s-time text{
+    font-size: 32rpx;
+    color: var(--gray);
+}
+.s-img{
+    margin-top: 20rpx;
+    padding: 30rpx;
+}
+.s-img image{
+    width: 100%;
+    height: 334rpx;
+    border-radius: 5rpx;
+    margin-top: 20rpx;
+}
+
 .p-but{
     position: fixed;
     bottom: 0;

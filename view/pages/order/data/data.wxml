@@ -1,0 +1,33 @@
+<view class="f-bg"></view>
+<view class="d-title">本次信息完善可以支持线下门店完善</view>
+<view class="d-trip">
+    <view class="d-trip-title">出行人</view>
+    <view class="d-trip-add">
+        <view>添加<text>1位</text>出行了</view>
+        <view>选择出行人</view>
+    </view>
+    <view class="d-trip-list">
+        <text>成人1</text>
+        <view>谢霆锋</view>
+        <view>45845454551</view>
+    </view>
+</view>
+<view class="d-leave">
+    <view>买家留言</view>
+    <input value="地方大师傅"></input>
+</view>
+
+<view class="d-but">我要去线下门店完善</view>
+<view class="f-hint">
+    <view class="f-h-title">温馨提示</view>
+    <view>1、请确认所填写信息与所持证件信息一致， 因信息不完整，填写不正确造成的额外损 失、保险拒赔等问题，我司不承担相应责 任，需由客人自行承担。 </view>
+    <view>2、大于2周岁不满12周岁的儿童不可使用 出生证明，请使用身份证、户口簿等，乘机 请携带填写的相应证件。</view>
+    <view> 3、本产品不支持孕妇出游  </view>
+    <view>4、不支持全是未成年人出游</view>
+    <view>5、出游人中有年龄高于70岁(含)的游客不 接收，敬请谅解!</view>
+</view>
+
+<view style="height:160rpx"></view>
+<view class="p-but">
+    <view class="but">提交资料</view>
+</view>
