@@ -18,6 +18,8 @@ Page({
     scoreList:[
       { 'name': '商品质量','stars':0},
       { 'name': '服务态度','stars':0},
+      { 'name': '商品质量','stars':0},
+      { 'name': '服务态度','stars':0},
     ],
     pics:[],
     orderId:'',

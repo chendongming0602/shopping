@@ -3,17 +3,21 @@
     <view class="o-item">
         <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/all_order.png"></image>
         全部订单
+        <view class="o-red">10</view>
     </view>
     <view class="o-item">
         <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/trip.png"></image>
-        全部订单
+        待出行
     </view>
     <view class="o-item">
         <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/remark.png"></image>
-        全部订单
+        待点评
     </view>
     <view class="o-item">
         <image src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/info.png"></image>
-        全部订单
+        旅客信息
     </view>
+</view>
+<view wx:if="{{good_list.length}}" class="o-like">
+    <youLike good_list="{{good_list}}"></youLike>
 </view>

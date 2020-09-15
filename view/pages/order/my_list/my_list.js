@@ -1,4 +1,4 @@
-import { getProductDetail } from '../../../api/store.js';
+// pages/order/my_list/my_list.js
 Page({
 
     /**
@@ -12,23 +12,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        this.getGoodsDetails();
+
     },
-    getGoodsDetails: function () {
-        var that = this;
-        getProductDetail(74).then(res => {
-          var good_list = res.data.good_list || [];
-          var count = Math.ceil(good_list.length / 4);
-          var goodArray = new Array();
-          for (var i = 0; i < count; i++) {
-            var list = good_list.slice(i * 4, i * 4 + 4);
-            if (list.length) goodArray.push({ list: list });
-          }
-          that.setData({
-            good_list: goodArray,
-          });
-        });
-      },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

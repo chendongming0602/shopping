@@ -1,6 +1,5 @@
 {
   "usingComponents": {
-    "nav":"/components/nav/nav",
     "tab":"/components/tab/tab"
   }
 }

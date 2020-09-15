@@ -27,7 +27,7 @@
 			"outputPath": ""
 		},
 		"useIsolateContext": true,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
@@ -79,7 +79,7 @@
 				},
 				{
 					"id": 2,
-					"name": "pages/goods_details/index",
+					"name": "详情",
 					"pathName": "pages/goods_details/index",
 					"query": "id=74",
 					"scene": null
@@ -180,6 +180,20 @@
 					"name": "我的订单",
 					"pathName": "pages/order/my_order/my_order",
 					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "订单分类",
+					"pathName": "pages/order/my_list/my_list",
+					"query": "id=74",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "发布评论",
+					"pathName": "pages/goods_comment_con/index",
+					"query": "unique=74&uni=74",
 					"scene": null
 				}
 			]

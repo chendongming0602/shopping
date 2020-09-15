@@ -22,6 +22,7 @@
     font-weight: bold;
     text-align: center;
     margin-top: 40rpx;
+    position: relative;
 }
 .o-item image{
     width: 150rpx;
@@ -29,4 +30,19 @@
     margin-bottom: 18rpx;
     display: block;
     margin: 55rpx auto 0;
+}
+.o-red{
+    width: 58rpx;
+    line-height: 58rpx;
+    border-radius: 50%;
+    text-align: center;
+    background: #f00;
+    color: #fff;
+    font-size: 32rpx;
+    position: absolute;
+    top: 35rpx;
+    right: 75rpx;
+}
+.o-like{
+    margin-top: 70rpx;
 }

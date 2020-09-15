@@ -1,0 +1,16 @@
+<view class="l-class">
+    <view wx:for="{{3}}" wx:key="index" class="{{index===1?'l-list-a':''}}">待出行</view>
+</view>
+<view style="height:125rpx"></view>
+<view class="l-list">
+    <view class="l-item" wx:for="{{3}}" wx:key="index">
+        <view class="l-mark">订单编号：109843843434</view>
+        <view class="l-title">兰州出发-跟团游 早订享优惠寻梦香 巴拉2日2-8人（郎木寺+莲宝叶则+唐 克）</view>
+        <view class="l-tc">套餐类型：09/09日 A套餐：奢华3日-五星香格 里拉 x1</view>
+        <view class="l-but">
+            <view class="l-status">正在处理</view>
+            <view>查看进程</view>
+            <view>¥2343</view>
+        </view>
+    </view>
+</view>

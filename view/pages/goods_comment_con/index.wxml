@@ -1,7 +1,7 @@
 <navbar parameter='{{parameter}}'></navbar>
 <form bindsubmit="formSubmit" report-submit='true'>
 <view class='evaluate-con'>
-   <view class='goodsStyle acea-row row-between'>
+   <!-- <view class='goodsStyle acea-row row-between'>
       <view class='pictrue'><image src='{{productInfo.image}}'></image></view>
       <view class='text acea-row row-between'>
          <view class='name line2'>{{productInfo.store_name}}</view>
@@ -10,21 +10,28 @@
             <view class='num'>x{{cart_num}}</view>
          </view>
       </view>
+   </view> -->
+   <view class="top-box">
+      <view>兰州出发-跟团游 早订享优惠寻梦香巴拉 2日2-8人（郎木寺+莲宝叶则+唐克）</view>
+      <view>套餐类型：09/09日 A套餐：奢华3日-五星香格 里拉 x1</view>
+      <view>¥2389534</view>
    </view>
    <view class='score'>
-       <view class='item acea-row row-middle' wx:for='{{scoreList}}' wx:key='index'>
-           <view>{{item.name}}</view>
-           <view class='starsList'>
-              <text bindtap='stars' data-indexw='{{index}}' data-index='1' class='iconfont {{item.stars>=1?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
-              <text bindtap='stars' data-indexw='{{index}}' data-index='2' class='iconfont {{item.stars>=2?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
-              <text bindtap='stars' data-indexw='{{index}}' data-index='3' class='iconfont {{item.stars>=3?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
-              <text bindtap='stars' data-indexw='{{index}}' data-index='4' class='iconfont {{item.stars>=4?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
-              <text bindtap='stars' data-indexw='{{index}}' data-index='5' class='iconfont {{item.stars>=5?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
-           </view>
-           <text class='evaluate' wx:if="{{item.stars}}">{{item.stars==5 ? "非常好":item.stars+"分"}}</text>
-       </view>
+         <view class='item ' wx:for='{{scoreList}}' wx:key='index'>
+            <view class="item-name">{{item.name}}</view>
+            <view class="acea-row row-middle item-xing">
+               <view class='starsList'>
+                  <text bindtap='stars' data-indexw='{{index}}' data-index='1' class='iconfont {{item.stars>=1?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
+                  <text bindtap='stars' data-indexw='{{index}}' data-index='2' class='iconfont {{item.stars>=2?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
+                  <text bindtap='stars' data-indexw='{{index}}' data-index='3' class='iconfont {{item.stars>=3?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
+                  <text bindtap='stars' data-indexw='{{index}}' data-index='4' class='iconfont {{item.stars>=4?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
+                  <text bindtap='stars' data-indexw='{{index}}' data-index='5' class='iconfont {{item.stars>=5?"icon-shitixing font-color":"icon-kongxinxing"}}'></text>
+               </view>
+               <text class='evaluate' wx:if="{{item.stars}}">{{item.stars<=2?'差':item.stars==3?'一般':item.stars==4?'好':'非常好'}}</text>
+            </view>
+         </view>
        <view class='textarea'>
-          <textarea placeholder='商品满足你的期待么？说说你的想法，分享给想买的他们吧~' name="comment" placeholder-class='placeholder'></textarea>
+          <textarea placeholder='选填，建议先与商家协商一致' name="comment" placeholder-class='placeholder'></textarea>
           <view class='list acea-row row-middle'>
              <view class='pictrue' wx:for="{{pics}}" wx:key='index'>
                <image src='{{item}}'></image>
@@ -32,11 +39,11 @@
              </view>
              <view class='pictrue acea-row row-center-wrapper row-column' bindtap='uploadpic' wx:if="{{pics.length < 8}}">
                <text class='iconfont icon-icon25201'></text>
-               <view>上传图片</view>
+               <view class="up-but">上传图片</view>
              </view>
           </view>
        </view>
-       <button class='evaluateBnt bg-color' formType="submit">立即评价</button>
+       <view class="but ">立即评价</view>
    </view>
 </view>
 </form>

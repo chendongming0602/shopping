@@ -1,5 +1,7 @@
 {
   "navigationStyle":"default",
   "navigationBarTitleText":"资料完善",
-  "usingComponents": {}
+  "usingComponents": {
+    "youLike": "/components/youLike/youLike"
+  }
 }

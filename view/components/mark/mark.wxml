@@ -1,0 +1,9 @@
+<view class="masks" catch:touchmove wx:if="{{show}}">
+    <view class="content">
+        <image catchtap="close" class="close" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/close.png"></image>
+        <image class="code" src="https://minis-resources-1254468731.cos.ap-guangzhou.myqcloud.com/video/new/close.png"></image>
+        <view>点击，长按扫码关注 </view>
+        <view>XX微信公众号</view>
+        <view>内容更新早知道</view>
+    </view>
+</view>

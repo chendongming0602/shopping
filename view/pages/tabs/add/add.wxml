@@ -1,2 +1,3 @@
-<!--pages/tabs/add/add.wxml-->
+<nav text="编辑" is_return="{{false}}"></nav>
 <text>pages/tabs/add/add.wxml</text>
+<tab tabCount="{{2}}" ></tab>

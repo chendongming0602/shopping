@@ -1,0 +1,26 @@
+@import "/app.wxss";
+.masks .content{
+    padding: 84rpx 30rpx 60rpx;
+    background: #fff;
+    border-radius: 22rpx;
+    text-align: center;
+    width: 600rpx;
+    position: relative;
+}
+.masks .content .close{
+    width: 36rpx;
+    height: 36rpx;
+    position: absolute;
+    top: 20rpx;
+    right: 20rpx;
+}
+.masks .content .code{
+    width: 340rpx;
+    height: 340rpx;
+    border-radius: 50%;
+    margin:30rpx auto 0;
+}
+.masks .content view{
+    font-size: 40rpx;
+    font-weight: bold;
+}

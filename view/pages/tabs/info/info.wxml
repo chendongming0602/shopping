@@ -1,2 +1,3 @@
 <!--pages/tabs/info/info.wxml-->
 <text>pages/tabs/info/info.wxml</text>
+<tab tabCount="{{3}}" ></tab>

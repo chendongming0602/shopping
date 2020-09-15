@@ -413,10 +413,12 @@
 
 .icon-kongxinxing:before {
   content: "\e6fc";
+  color: #E4E4E4;
 }
 
 .icon-shitixing:before {
   content: "\e6fb";
+  color: #F9D726;
 }
 
 .icon-pintuanchenggong:before {

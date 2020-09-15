@@ -1,9 +1,10 @@
 {
   "pages": [
-    "pages/user/user",
-    "pages/index/index",
     "pages/tabs/travel/travel",
     "pages/tabs/index/index",
+    "pages/tabs/my/my",
+    "pages/user/user",
+    "pages/index/index",
     "pages/tabs/add/add",
     "pages/tabs/info/info",
     "pages/goods_cate/goods_cate",
@@ -80,6 +81,7 @@
         "info/info",
         "add_info/add_info",
         "my_order/my_order",
+        "my_list/my_list",
         "look/look"
         
       ]
@@ -143,7 +145,7 @@
         "text": ""
       },
       {
-        "pagePath": "pages/user/user",
+        "pagePath": "pages/tabs/my/my",
         "text": ""
       }
     ]
